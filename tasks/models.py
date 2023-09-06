@@ -9,10 +9,6 @@ class Task(models.Model):
     start_date = models.DateTimeField()
     due_date = models.DateTimeField()
     is_completed = models.BooleanField(default=True)
-
-    def __str__(self):
-        return self.name
-
     project = models.ForeignKey(
         Project,
         related_name="tasks",
@@ -23,3 +19,6 @@ class Task(models.Model):
         related_name="tasks",
         on_delete=models.CASCADE,
     )
+
+    def __str__(self):
+        return self.name
