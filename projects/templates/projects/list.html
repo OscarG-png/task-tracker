@@ -8,7 +8,7 @@
     <main>
         <div>
             <h1>My Projects</h1>
-            {% if projects_list %}
+            {% if list_projects %}
                 <table>
                     <thead>
                         <tr>
@@ -17,7 +17,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% for item in projects_list %}
+                        {% for item in list_projects %}
                         <tr>
                             <td>{{ item.name }}</td>
                             <td>{{ item|length }}</td>
